@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LocationInputComponent } from './location-input/location-input.component';
 import { MapComponent } from './map/map.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LocationInputComponent,
-    MapComponent
+    MapComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
