@@ -32,6 +32,27 @@ export class MapComponent implements OnInit {
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76],
     });
+
+    var iconX=24*1.25;
+    var iconY=39*1.25;
+
+    var greenIcon = L.icon({
+      iconUrl: 'https://i.ibb.co/Hp4bwzN/greenpin.png',
+      iconSize:     [iconX, iconY], // size of the icon
+      //shadowSize:   [50, 64], // size of the shadow
+      iconAnchor:   [iconX/2, iconY], // point of the icon which will correspond to marker's location
+      //shadowAnchor: [4, 62],  // the same for the shadow
+      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var redIcon = L.icon({
+      iconUrl: 'https://i.ibb.co/fkKWdmD/redpin.png',
+      iconSize:     [iconX, iconY], // size of the icon
+      //shadowSize:   [50, 64], // size of the shadow
+      iconAnchor:   [iconX/2, iconY], // point of the icon which will correspond to marker's location
+      //shadowAnchor: [4, 62],  // the same for the shadow
+      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
     
     //function that runs when form is submitted
     /*function submitForm(event) {
@@ -46,12 +67,12 @@ export class MapComponent implements OnInit {
 
     //form?.addEventListener('submit', submitForm); 
 
-    L.marker(this.start, {icon: myIcon}).addTo(this.map); //marks start
-    L.marker(this.end, {icon: myIcon}).addTo(this.map); //marks end
+    L.marker(this.start, {icon: greenIcon}).addTo(this.map); //marks start
+    L.marker(this.end, {icon: redIcon}).addTo(this.map); //marks end
 
    
 
-    L.marker(this.centroid, {icon: myIcon}).addTo(this.map); //marks center
+    //L.marker(this.centroid, {icon: greenIcon}).addTo(this.map); //marks center
     
     tiles.addTo(this.map);
 
