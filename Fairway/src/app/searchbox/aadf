@@ -1,0 +1,6 @@
+
+http://api.positionstack.com/v1/forward
+    ? access_key = 4e3d941539b6f2b16a148d4092602345
+    & query = 1600 Pennsylvania Ave NW, Washington DC
+
+    & output = json
