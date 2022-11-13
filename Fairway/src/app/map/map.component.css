@@ -5,12 +5,9 @@
     right: 0;
     bottom: 0;
     margin: 0px;
-<<<<<<< Updated upstream
-}
-=======
     z-index: -1;
   }
->>>>>>> Stashed changes
+
   
   .map-frame {
     border: 2px solid black;
@@ -19,10 +16,6 @@
   
   #map {
     height: 100%;
-<<<<<<< Updated upstream
-}
-  
-=======
   }
 .formBlock{
   max-width: 300px;
@@ -57,4 +50,3 @@
 .leaflet-top .leaflet-control {
   margin-top: 180px;
 }
->>>>>>> Stashed changes
