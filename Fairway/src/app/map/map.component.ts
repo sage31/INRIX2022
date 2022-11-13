@@ -57,34 +57,9 @@ export class MapComponent implements OnInit {
   
   }
 
-  @ViewChild('locationInput') locationInput: ElementRef;
-  @ViewChild('main') main: ElementRef;
   
-  //function to get coordinates from address
-  getCoordinates(address: string){
-    this.geocoder.geocode({address: address}, (results, status) => {
-      if(status === "OK"){
-        this.map.setCenter(results[0].geometry.location);
-        this.map.setZoom(15);
-        this.marker.setPosition(results[0].geometry.location);
-      }
-    });
-  }
   
-  calculateDistance(){
-    //get start and end location from form
-    var start = (<HTMLInputElement>document.getElementById("start")).value;
-    var end = (<HTMLInputElement>document.getElementById("end")).value;
-    //get coordinates of start and end location
-    var startCoord = this.getCoordinates(start);
-    var endCoord = this.getCoordinates(end);
 
-    //calculate distance between start and end location
-    var distance = this.getDistance(startCoord, endCoord);
-
-    //display distance on page
-    //document.getElementById("distance").innerHTML = distance + " miles";
-  }
 
 
   constructor() { }
