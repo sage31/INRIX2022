@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
@@ -43,6 +43,14 @@ export class MapComponent implements OnInit {
 
   
   }
+
+  @ViewChild('locationInput') locationInput: ElementRef;
+  @ViewChild('main') main: ElementRef;
+  //
+  submitForm(event) {
+    
+  }
+
 
   constructor() { }
 
