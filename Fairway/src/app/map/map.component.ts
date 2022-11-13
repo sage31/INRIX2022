@@ -9,7 +9,8 @@ import * as L from 'leaflet';
 export class MapComponent implements OnInit {
 
   private map: L.Map;
-  private centroid: L.LatLngExpression = [37.7749, -122.4194]; //
+  private centroid = L.latLng(37, -122);
+  private x=this.centroid; //
 
 
   private initMap(): void {
@@ -29,8 +30,11 @@ export class MapComponent implements OnInit {
       iconSize: [38, 95],
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76],
+      shadowUrl: 'my-icon-shadow.png',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
     });
-    
+
     L.marker([37.7749, -122.4194], {icon: myIcon}).addTo(this.map);
     L.marker([37.7529, -122.4474], {icon: myIcon}).addTo(this.map);
 
