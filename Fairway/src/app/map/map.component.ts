@@ -76,20 +76,23 @@ export class MapComponent implements OnInit {
     
     tiles.addTo(this.map);
 
-    this.drawPolyline();
+    //this.drawPolyline();
   }
 
   
   
 
 
-  private drawPolyline(): void{
-  var latlngs = [
-    this.start,
-    this.end
-];  
-  L.polyline((latlngs)).addTo(this.map);
+  public drawPolyline = (data: number[][]) => {
+
+  let array: L.LatLng[] = new Array(data.length);
+  for(let i = 0; i<data.length; i++){
+    array[i] = L.latLng(data[i][1],data[i][0]);
   }
+  console.log("RECIEVED", array, this.map);
+  L.polyline(array).addTo(this.map);
+
+}
 
 
   constructor() { }
