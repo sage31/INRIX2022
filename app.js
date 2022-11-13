@@ -69,6 +69,7 @@ app.get('/findRoute', async function (req, res) {
     let json = await response.json();
     let output = json.result;
 
+
     res.json({
         route1: await getRouteGeography(output.trip.routes[0]),
         route2: await getRouteGeography(output.trip.routes[1]),
