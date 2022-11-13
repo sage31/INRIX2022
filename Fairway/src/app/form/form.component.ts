@@ -13,18 +13,7 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //function that runs when form is submitted
-    /*function submitForm(event) {
-      event.preventDefault();
 
-     
-    }
-    */
-
-    //assign form to a form variable, start and destination
-    const form = document.getElementById('form');
-
-    //form?.addEventListener('submit', submitForm);
   }
 
   calculateRoute(e: any): void{
