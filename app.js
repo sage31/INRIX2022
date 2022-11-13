@@ -83,12 +83,12 @@ function getRouteGeography(route1, route2, route3){
         console.log(routeID);
         let url = `https://api.iq.inrix.com/route?routeId=${routeID}&routeOutputFields=all&incidentOutputFields=all&format=json`
         //let url = `https://api.iq.inrix.com/route?routeId=20116607&routeOutputFields=all&incidentOutputFields=all&format=json`
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Bearer " + theToken);
 
         var requestOptions = {
         method: 'GET',
-        headers: myHeaders,
+        headers: {
+            "Authorization": "Bearer " + theToken
+        },
         redirect: 'follow'
         };
 

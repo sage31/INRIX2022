@@ -29,9 +29,6 @@ export class MapComponent implements OnInit {
       iconSize: [38, 95],
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76],
-      shadowUrl: 'my-icon-shadow.png',
-      shadowSize: [68, 95],
-      shadowAnchor: [22, 94]
     });
     
     L.marker([37.7749, -122.4194], {icon: myIcon}).addTo(this.map);
