@@ -7,7 +7,7 @@
 #sidebar {
     font-family: 'Roboto', sans-serif;
     width: 250px;
-    margin-right: 50px;
+    margin-right: 10px;
     position: absolute;
     top: 0;
     right: 0;
@@ -41,6 +41,8 @@
     cursor: pointer;
     transition: .3s ease;
     font-size: 20px;
+    right: -40px;
+    position: absolute;
 }
 
 p {
