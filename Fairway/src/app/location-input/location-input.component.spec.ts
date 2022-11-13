@@ -21,3 +21,4 @@ describe('LocationInputComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
