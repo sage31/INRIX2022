@@ -37,36 +37,13 @@ button {
   left: 0;
   right: 0;
 }
-
-.input {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 15px;
-  border-radius: 3px;
-}
-
-#form {
-  padding: 0;
-  margin: 0;
-}
-
-.input:nth-child(1) {
-  margin-bottom: 10px;
-}
-
-.leaflet-top .leaflet-control {
-  margin-top: 180px;
-}
-
-/* new styles for autocomplete container */
 .autocomplete-container {
   margin-bottom: 20px;
 }
 
 .input-container {
   display: flex;
+  position: relative;
 }
 
 .input-container input {
@@ -77,22 +54,72 @@ button {
   padding: 10px;
   padding-right: 31px;
   font-size: 16px;
-}.autocomplete-container {
-  margin-bottom: 20px;
 }
 
-.input-container {
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+  border-top: none;
+  background-color: #fff;
+
+  z-index: 99;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-items .autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.clear-button {
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  
+  position: absolute;
+  right: 5px;
+  top: 0;
+
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+
+.clear-button.visible {
   display: flex;
 }
 
-.input-container input {
-  flex: 1;
-  outline: none;
-  
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  padding-right: 31px;
-  font-size: 16px;
+.clear-button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+  width: 250px;
+  height: 50px;
+  border-radius: 1rem;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s ease;
+  font-size: 20px;
+  right: -40px;
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
 }
 
 .btn {
