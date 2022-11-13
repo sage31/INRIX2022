@@ -94,3 +94,20 @@ button {
   padding-right: 31px;
   font-size: 16px;
 }
+
+.btn {
+  width: 250px;
+  height: 50px;
+  border-radius: 1rem;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s ease;
+  font-size: 20px;
+  right: -40px;
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+}
