@@ -55,12 +55,29 @@ export class MapComponent implements OnInit {
     
     tiles.addTo(this.map);
 
-  
+    this.drawPolyline();
   }
 
   
   
+  private drawLine(): void{
+    var latlngs = [
+      new L.LatLng(45.51, -122.68),
+      new L.LatLng(37.77, -122.43),
+      new L.LatLng(34.04, -118.2)
+  ];  
+    var polyline = L.polyline(latlngs, {color: 'red'}).addTo(this.map);
 
+    
+  }
+
+  private drawPolyline(): void{
+  var latlngs = [
+    new L.LatLng(37.7749, -122.4194),
+    new L.LatLng(37.7529, -122.4474)
+];  
+  L.polyline((latlngs)).addTo(this.map);
+  }
 
 
   constructor() { }
