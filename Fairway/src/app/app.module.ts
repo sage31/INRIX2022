@@ -11,6 +11,7 @@ import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './map/map.component';
 import { FormComponent } from './form/form.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -30,6 +31,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
