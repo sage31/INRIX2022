@@ -34,9 +34,3 @@ export class MapComponent implements AfterViewInit {
   }
 
 }
-export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-}
