@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { MapComponent } from './map/map.component';
 import { FormComponent } from './form/form.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormComponent } from './form/form.component';
     SearchboxComponent,
     FooterComponent,
     MapComponent,
-    FormComponent
+    FormComponent,
+    SidebarComponent
 
   ],
   imports: [
