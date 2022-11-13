@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
 
 .content {
     position: relative;
 }
 
 #sidebar {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     width: 250px;
     margin-right: 10px;
     position: absolute;
     top: 0;
     right: 0;
     padding: 0;
-    height: 75vh;
+    height: 95vh;
     text-align: left;
     border: 2px solid red;
     border-radius: 1rem;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 #temp {
@@ -32,7 +34,7 @@
 
 .btn {
     width: 250px;
-    height: 69px;
+    height: 50px;
     border-radius: 1rem;
     justify-self: center;
     display: flex;
@@ -43,21 +45,23 @@
     font-size: 20px;
     right: -40px;
     position: absolute;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
 }
 
 .closeButton {
-    margin: 5px 15px 0 0;
+    margin: 0 15px 0 0;
     position: absolute;
     right: 0;
-    padding: 1px 10px;
+    padding: 0 10px;
     border: 1px solid black;
     border-radius: 4px;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     background-color: #af4c4c;
     clear:right;
@@ -65,19 +69,18 @@ p {
 
 #sidebar header {
     background-color: #263238;
-    font-size: 20px;
-    line-height: 52px;
+    line-height: 30px;
     text-align: center;
     border: 10px solid #263238;
     border-radius: 0.88rem 0.88rem 0.5rem 0.5rem;
 }
 
 #sidebar header span {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #fff;
     display: block;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #sidebarcontents {

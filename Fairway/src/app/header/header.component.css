@@ -1,8 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 
-h1  {
-    font-family: 'Inter', sans-serif;
-    font-size: 40px;
-    color: white
-    ;
+
+
+div {
+  clear: both;
+  height: 50px;
+  position: fixed;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: hidden;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  color: #fff;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  color: black;
+  text-shadow: -0.25px -0.25px 0 grey, 0.25px -0.25px 0 grey, -0.25px 0.25px 0 grey, 0.25px 0.25px 0 grey;
+  position: relative;
+  top: -22px;
+  left: 350px;
 }

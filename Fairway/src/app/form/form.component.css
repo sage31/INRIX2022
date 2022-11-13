@@ -63,7 +63,7 @@ button {
   border-top: none;
   background-color: #fff;
 
-  z-index: 999;
+  z-index: 99;
   top: calc(100% + 2px);
   left: 0;
   right: 0;
