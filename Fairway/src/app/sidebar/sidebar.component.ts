@@ -13,14 +13,17 @@ export class SidebarComponent implements OnInit {
   }
 
   //new stuff
-  @ViewChild('rightMenu') rightMenu: ElementRef;
+  @ViewChild('sidebar') sidebar: ElementRef;
+  @ViewChild('temp') temp: ElementRef;
 
-  openRightMenu() {
-    this.rightMenu.nativeElement.style.display = "block";
+  openMenu() {
+    this.sidebar.nativeElement.style.display = "block";
+    this.temp.nativeElement.style.display = "none";
   }
   
-  closeRightMenu() {
-    this.rightMenu.nativeElement.style.display = "none";
+  closeMenu() {
+    this.sidebar.nativeElement.style.display = "none";
+    this.temp.nativeElement.style.display = "block";
   }
 
 }

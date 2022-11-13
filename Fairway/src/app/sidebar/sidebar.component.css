@@ -1,18 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
 .content {
     position: relative;
 }
 
 #sidebar {
+    font-family: 'Roboto', sans-serif;
     width: 250px;
     margin-right: 50px;
     position: absolute;
     top: 0;
     right: 0;
     padding: 0;
+    height: 75vh;
     text-align: left;
     border: 1px solid red;
+    background-color: whitesmoke;
+}
+
+#temp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 50px;
 }
 
 #sidebarcontents {
     padding: 5px 0px 5px 0px;
+}
+
+.btn {
+    width: 15rem;
+    height: 4rem;
+    border-radius: 1rem;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.closeButton {
+    margin: 0px;
+    position: absolute;
+    right: 0;
+    padding: 1px 10px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 30px;
+    color: white;
+    background-color: #af4c4c;
+    clear:right;
+}
+
+#sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+}
+
+#sidebar header span {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebarcontents {
+    margin: 10px 0 0 0;
+    text-align: center;
+
 }
