@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LocationInputComponent } from './location-input/location-input.component';
+import { SearchboxComponent } from './searchbox/searchbox.component';
 import { MapComponent } from './map/map.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -14,8 +15,9 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     HeaderComponent,
     LocationInputComponent,
+    SearchboxComponent,
     MapComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
