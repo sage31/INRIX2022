@@ -66,6 +66,7 @@ app.get('/findRoute', async function (req, res) {
     });
 
     getRouteGeography(route1,route2,route3);
+    //RETURN (using res) :  a json object that contains three routes, with their mileage, time, price, and danger multiplier
     
 })
 
