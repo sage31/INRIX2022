@@ -1,13 +1,12 @@
-<app-header> 
-</app-header>
-<app-sidebar>
+<app-sidebar #mysidebar>
 </app-sidebar>
 <app-location-input>
 </app-location-input>
 <app-map #mymap>
 
 </app-map>
-<app-form (myEvent)="mymap.drawPolyline($event)">
+<app-form (myEvent)="mymap.drawPolyline($event)"
+            (myEvent2)="mysidebar.display($event)">
     
 </app-form>
 
