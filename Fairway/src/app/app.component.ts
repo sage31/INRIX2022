@@ -8,9 +8,7 @@ import {UsersService} from './users.service';
 })
 export class AppComponent {
   title = 'Fairway';
-  constructor(private user: UsersService) {
-    this.user.getData().subscribe(data=>{
-      console.warn(data);
-    })
+  constructor() {
+    
   }
 }

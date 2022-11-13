@@ -19,9 +19,9 @@ export class FormComponent implements OnInit {
   calculateRoute(e: any): void{
     e.preventDefault(); 
     
-    
+    console.log("click");
    
-    this.user.getData2("San Jose", "Santa Clara").subscribe((data: any)=> {
+    this.user.getData2("55 Stevenson Street, San Francisco, CA", "368 Bush Street, San Francisco, CA").subscribe((data: any)=> {
       console.log(data);
     })
   }
