@@ -1,19 +1,25 @@
+
+
 <div class="formBlock">
-  <div #searchBar id="searchBar">
+  
+  <div #searchBar id="searchBar" class = "searchBar" data-closable>
+    <button (click)="closeMenu()" class="closeButton">&times;</button>
     <form id="form" (ngSubmit)="calculateRoute($event)">
       <div class="autocomplete-container" id="autocomplete-container"></div>
       <input type="text" name="start" class="input" id="start" placeholder="Choose Starting Point" />
       <br>
       <div class="autocomplete-container" id="autocomplete-container2"></div>
       <input type="text" name="end " class="input" id="destination" placeholder="Choose Destination" />
-      <button type="submit">
+      <button id="submit">
         <div class="text">Calculate</div>
       </button>
+
     </form>
-    
   </div>
-  <div #temp id="temp" style="display:none;">
-    <button (click)="openMenu()" class="btn">&#9776; Search</button>
-  </div>
+
+<div #temp id="temp" style="display:none;">
+  <button (click)="openMenu()" class="btn">&#9776; Search</button>
 </div>
+</div>
+
 <script src="form.component.js"></script>

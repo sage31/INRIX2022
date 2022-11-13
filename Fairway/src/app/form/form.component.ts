@@ -38,7 +38,7 @@ export class FormComponent implements OnInit {
     this.searchBar.nativeElement.style.display = "none";
     this.temp.nativeElement.style.display = "block";
   }
-
+  
 }
 
 

@@ -66,6 +66,10 @@ p {
     background-color: #af4c4c;
     clear: right;
 }
+.closeButton:hover{
+    background-color: #ff0000;
+}
+
 
 #sidebar header {
     background-color: #263238;
