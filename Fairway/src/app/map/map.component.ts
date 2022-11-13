@@ -30,20 +30,7 @@ export class MapComponent implements OnInit {
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76],
     });
-    
-    //function that runs when form is submitted
-    /*function submitForm(event) {
-      event.preventDefault();
-
      
-    }
-    */
-
-    //assign form to a form variable, start and destination
-    const form = document.getElementById('form');
-
-    //form?.addEventListener('submit', submitForm); 
-
     L.marker([37.7749, -122.4194], {icon: myIcon}).addTo(this.map);
     L.marker([37.7529, -122.4474], {icon: myIcon}).addTo(this.map);
 
