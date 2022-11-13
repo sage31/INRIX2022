@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import * as L from 'leaflet';
 import { AfterViewInit } from '@angular/core';
+=======
+>>>>>>> 441dc816ce818ce9b6e014a14fb3d7481d57e3ad
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
+<<<<<<< HEAD
 export class MapComponent implements AfterViewInit {
   private map = L.map('map', {
     center: [ 39.8282, -98.5795 ],
@@ -35,8 +39,16 @@ export class MapComponent implements AfterViewInit {
 
 }
 export class HeaderComponent implements OnInit {
+=======
+export class MapComponent implements OnInit {
+>>>>>>> 441dc816ce818ce9b6e014a14fb3d7481d57e3ad
 
   constructor() { }
 
   ngOnInit(): void {
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> 441dc816ce818ce9b6e014a14fb3d7481d57e3ad
 }

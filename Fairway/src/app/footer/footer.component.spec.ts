@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LocationInputComponent } from './location-input.component';
+import { FooterComponent } from './footer.component';
 
-describe('LocationInputComponent', () => {
-  let component: LocationInputComponent;
-  let fixture: ComponentFixture<LocationInputComponent>;
+describe('FooterComponent', () => {
+  let component: FooterComponent;
+  let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LocationInputComponent ]
+      declarations: [ FooterComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LocationInputComponent);
+    fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,4 +21,3 @@ describe('LocationInputComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

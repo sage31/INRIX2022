@@ -1,1 +1,23 @@
-<p>location-input works!</p>
+
+<div #mySidebar>
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">×</a>
+    <a href="#">Route A</a>
+    <a href="#">Route B</a>
+    <a href="#">Route C</a>
+</div>
+
+<div #main>
+    <button class="openbtn" (click)="openNav()">☰</button>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "175px";
+  document.getElementById("main").style.marginLeft = "175px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
