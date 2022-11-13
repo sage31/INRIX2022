@@ -9,10 +9,12 @@ import * as L from 'leaflet';
 export class MapComponent implements OnInit {
 
   private map: L.Map;
-  private centroid = L.latLng(37.7749, -122.4194); //
+  private start = L.latLng(37.7749, -122.4194); //placeholder start and end coords
+  private end = L.latLng(37.7529, -122.4474);
+  private centroid = L.latLng((this.start.lat+this.end.lat)/2, (this.start.lng+this.end.lng)/2); //calculated center point
 
 
-  private initMap(): void {
+  private initMap(): void { //generates map with about center
     this.map = L.map('map', {
       center: this.centroid,
       zoom: 12
@@ -30,14 +32,26 @@ export class MapComponent implements OnInit {
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76],
     });
+    
+    //function that runs when form is submitted
+    /*function submitForm(event) {
+      event.preventDefault();
+
      
-    L.marker([37.7749, -122.4194], {icon: myIcon}).addTo(this.map);
-    L.marker([37.7529, -122.4474], {icon: myIcon}).addTo(this.map);
+    }
+    */
 
-    var centerpointX = (37.7749 + 37.7529)/2;
-    var centerpointY = (-122.4194 + -122.4474)/2;
+    //assign form to a form variable, start and destination
+    const form = document.getElementById('form');
 
-    L.marker([centerpointX, centerpointY], {icon: myIcon}).addTo(this.map);
+    //form?.addEventListener('submit', submitForm); 
+
+    L.marker(this.start, {icon: myIcon}).addTo(this.map); //marks start
+    L.marker(this.end, {icon: myIcon}).addTo(this.map); //marks end
+
+   
+
+    L.marker(this.centroid, {icon: myIcon}).addTo(this.map); //marks center
     
     tiles.addTo(this.map);
 
