@@ -1,18 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
 .content {
     position: relative;
 }
 
 #sidebar {
+    font-family: 'Roboto', sans-serif;
     width: 250px;
-    margin-right: 50px;
+    margin-right: 10px;
     position: absolute;
     top: 0;
     right: 0;
     padding: 0;
+    height: 75vh;
     text-align: left;
-    border: 1px solid red;
+    border: 2px solid red;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+}
+
+#temp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 50px;
 }
 
 #sidebarcontents {
     padding: 5px 0px 5px 0px;
+}
+
+.btn {
+    width: 250px;
+    height: 69px;
+    border-radius: 1rem;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease;
+    font-size: 20px;
+    right: -40px;
+    position: absolute;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.closeButton {
+    margin: 5px 15px 0 0;
+    position: absolute;
+    right: 0;
+    padding: 1px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 30px;
+    color: white;
+    background-color: #af4c4c;
+    clear:right;
+}
+
+#sidebar header {
+    background-color: #263238;
+    font-size: 20px;
+    line-height: 52px;
+    text-align: center;
+    border: 10px solid #263238;
+    border-radius: 0.88rem 0.88rem 0.5rem 0.5rem;
+}
+
+#sidebar header span {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#sidebarcontents {
+    margin: 10px 0 0 0;
+    text-align: center;
+
 }

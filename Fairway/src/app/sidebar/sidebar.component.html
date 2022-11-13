@@ -1,5 +1,21 @@
 <div class="content">
-    <div id="sidebar">
-      <div id="sidebarcontents">sidebar contents</div>
+    <div #sidebar id="sidebar">
+        <header>
+            <button (click)="closeMenu()" class="closeButton" >&times;</button>
+            <span>Routes</span>
+        </header>
+        <div id="sidebarcontents">
+            <h3>Route A</h3>
+            <p>price</p>
+            <p>danger</p>
+            <p>miles</p>
+            <h3>Route B</h3>
+
+            <h3>Route C</h3>
+
+        </div>
     </div>
-  </div>
+    <div #temp id="temp" style = "display:none;">
+        <button (click)="openMenu()" class="btn">&#9776; Routes</button>
+    </div>
+</div>
