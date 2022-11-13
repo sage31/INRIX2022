@@ -3,6 +3,12 @@ const fetch = require("node-fetch");
 const { response } = require('express');
 const app = express();
 const port = 8000;
+var cors = require('cors');
+app.use(function(req, res, next) {
+res.header("Access-Control-Allow-Origin", "*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
 app.set('json spaces', 2);
 
 // to query, call: http://localhost:8000/gettoken
@@ -97,4 +103,7 @@ function getRouteGeography(route1, route2, route3){
 app.listen(port, async function () {
     console.log("Server has been started at " + port);
     theToken = await getToken();
+    
 })
+
+
