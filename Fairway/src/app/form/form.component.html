@@ -1,5 +1,5 @@
 <div class="formBlock">
-    <form id="form">
+    <form id="form" (ngSubmit)="calculateRoute($event)">
       <div class="autocomplete-container" id="autocomplete-container"></div>
       <input type="text" name="start" class="input" id="start" placeholder="Choose Starting Point"/>
       <br> 

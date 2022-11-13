@@ -67,12 +67,12 @@ app.get('/findRoute', async function (req, res) {
     //Query INRIX for token
     let response = await fetch(url, requestOptions);
     let json = await response.json();
-    await wait(1500);
+    await wait(1001);
     let output = json.result;
     let r1 = await getRouteGeography(output.trip.routes[0]);
-    await wait(1500);
+    await wait(1001);
     let r2 = await getRouteGeography(output.trip.routes[1]);
-    await wait(1500);
+    await wait(1001);
     let r3 = await getRouteGeography(output.trip.routes[2]);
     res.json({
         //route1: await getRouteGeography(output.trip.routes[0]),
