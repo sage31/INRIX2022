@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UsersService} from '../users.service';
+
 
 @Component({
   selector: 'app-form',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(public user: UsersService) {
+  }
 
   ngOnInit(): void {
     //function that runs when form is submitted
@@ -24,4 +27,16 @@ export class FormComponent implements OnInit {
     //form?.addEventListener('submit', submitForm);
   }
 
+  calculateRoute(e: any): void{
+    e.preventDefault(); 
+    
+    
+   
+    this.user.getData2("San Jose", "Santa Clara").subscribe((data: any)=> {
+      console.log(data);
+    })
+  }
+
 }
+
+

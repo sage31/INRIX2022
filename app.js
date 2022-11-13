@@ -67,15 +67,27 @@ app.get('/findRoute', async function (req, res) {
     //Query INRIX for token
     let response = await fetch(url, requestOptions);
     let json = await response.json();
+    await wait(1500);
     let output = json.result;
-
+    let r1 = await getRouteGeography(output.trip.routes[0]);
+    await wait(1500);
+    let r2 = await getRouteGeography(output.trip.routes[1]);
+    await wait(1500);
+    let r3 = await getRouteGeography(output.trip.routes[2]);
     res.json({
-        route1: await getRouteGeography(output.trip.routes[0]),
-        route2: await getRouteGeography(output.trip.routes[1]),
-        route3: await getRouteGeography(output.trip.routes[2]),
+        //route1: await getRouteGeography(output.trip.routes[0]),
+        route1: r1,
+        route2: r2,
+        route3: r3,
+        //route2: await getRouteGeography(output.trip.routes[1]),
+        //route3: await getRouteGeography(output.trip.routes[2]),
     });
 
 })
+
+function wait(milliseconds) {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
 
 async function getRouteGeography(route) {
 

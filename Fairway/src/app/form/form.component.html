@@ -1,5 +1,5 @@
 <div class="formBlock">
-    <form id="form">
+    <form id="form" (ngSubmit)="calculateRoute($event)" novalidate>
       <input type="text" name="start" class="input" id="start" placeholder="Choose Starting Point"/>
       <br> 
       <input type="text" name="end " class="input" id="destination" placeholder="Choose Destination"/> 
