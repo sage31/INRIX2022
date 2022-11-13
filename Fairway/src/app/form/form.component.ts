@@ -12,6 +12,7 @@ export class FormComponent implements OnInit {
   s_address : string;
 
   @Output() myEvent = new EventEmitter();
+  @Output() myEvent2 = new EventEmitter();
   constructor(public user: UsersService) {
   }
 
@@ -25,12 +26,15 @@ export class FormComponent implements OnInit {
     console.log("click");
 
     
+    
    
-    this.user.getData2("55 Stevenson Street, San Francisco, CA", "368 Bush Street, San Francisco, CA").subscribe((data: any)=> {
+    this.user.getData2(this.e_address, this.s_address).subscribe((data: any)=> {
       console.log(data);
+      this.myEvent2.emit(data);
       this.myEvent.emit(data.route1.coords);
       this.myEvent.emit(data.route2.coords);
       this.myEvent.emit(data.route3.coords);
+
 
       //this.comp.drawPolyline(data.route1.coords);
       

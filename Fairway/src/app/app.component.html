@@ -1,4 +1,4 @@
-<app-sidebar>
+<app-sidebar #mysidebar>
 </app-sidebar>
 <app-header> 
 </app-header>
@@ -8,7 +8,8 @@
 <app-map #mymap>
 
 </app-map>
-<app-form (myEvent)="mymap.drawPolyline($event)">
+<app-form (myEvent)="mymap.drawPolyline($event)"
+            (myEvent2)="mysidebar.display($event)">
     
 </app-form>
 
