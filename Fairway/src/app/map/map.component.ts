@@ -9,8 +9,12 @@ import * as L from 'leaflet';
 export class MapComponent implements OnInit {
 
   private map: L.Map;
+<<<<<<< Updated upstream
   private centroid = L.latLng(37, -122);
   private x=this.centroid; //
+=======
+  private centroid = L.latLng(37.7749, -122.4194); //
+>>>>>>> Stashed changes
 
 
   private initMap(): void {
