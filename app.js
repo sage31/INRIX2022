@@ -30,7 +30,7 @@ async function getToken() {
 }
 
 app.get('/findRoute', async function (req, res) {
-    let address1 = "Santa Clara University, Santa Clara, CA"; // reset to req.body.address
+    let address1 = "55 Stevenson St, San Francisco, CA 94105"; // reset to req.body.address
     let address2 = "301 Van Ness Ave, San Francisco, CA 94102";
     var requestOptions2 = {
         method: 'GET',
