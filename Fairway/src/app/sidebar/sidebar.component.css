@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
 
 .content {
     position: relative;
 }
 
 #sidebar {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     width: 250px;
     margin-right: 10px;
     position: absolute;
@@ -43,10 +45,11 @@
     font-size: 20px;
     right: -40px;
     position: absolute;
+    font-family: 'Inter', sans-serif;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
 }
 
@@ -73,7 +76,7 @@ p {
 }
 
 #sidebar header span {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #fff;
     display: block;
     text-decoration: none;
