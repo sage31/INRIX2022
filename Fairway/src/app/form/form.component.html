@@ -1,19 +1,12 @@
 
 
 <div class="formBlock">
-  
-  <div #searchBar id="searchBar" class = "searchBar" data-closable>
-    <button (click)="closeMenu()" class="closeButton">&times;</button>
-    <form id="form" (ngSubmit)="calculateRoute($event)">
+    <form id="form" (ngSubmit)="calculateRoute($event)" novalidate>
       <div class="autocomplete-container" id="autocomplete-container"></div>
-      <input type="text" name="start" class="input" id="start" placeholder="Choose Starting Point" />
-      <br>
-      <div class="autocomplete-container" id="autocomplete-container2"></div>
-      <input type="text" name="end " class="input" id="destination" placeholder="Choose Destination" />
-      <button id="submit">
-        <div class="text">Calculate</div>
-      </button>
-
+      <input [(ngModel)]="s_address" type="text" name="start" class="input" id="start" placeholder="Choose Starting Point"/>
+      <br> 
+      <input [(ngModel)]="e_address" type="text" name="end " class="input" id="destination" placeholder="Choose Destination"/> 
+      <button type = "submit">Calculate</button> 
     </form>
   </div>
 

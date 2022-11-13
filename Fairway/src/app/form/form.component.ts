@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, EventEmitter, OnInit, ViewChild, ElementRef, Output } from '@angular/core';
 import {UsersService} from '../users.service';
 
 
@@ -8,7 +8,10 @@ import {UsersService} from '../users.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  e_address : string;
+  s_address : string;
 
+  @Output() myEvent = new EventEmitter();
   constructor(public user: UsersService) {
   }
 
@@ -17,12 +20,20 @@ export class FormComponent implements OnInit {
   }
 
   calculateRoute(e: any): void{
-    e.preventDefault(); 
-    
+     
+    e.preventDefault();
     console.log("click");
+
+    
    
     this.user.getData2("55 Stevenson Street, San Francisco, CA", "368 Bush Street, San Francisco, CA").subscribe((data: any)=> {
       console.log(data);
+      this.myEvent.emit(data.route1.coords);
+      this.myEvent.emit(data.route2.coords);
+      this.myEvent.emit(data.route3.coords);
+
+      //this.comp.drawPolyline(data.route1.coords);
+      
     })
   }
 

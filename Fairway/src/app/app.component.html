@@ -4,8 +4,10 @@
 </app-sidebar>
 <app-location-input>
 </app-location-input>
-<app-map>
+<app-map #mymap>
+
 </app-map>
-<app-form>
+<app-form (myEvent)="mymap.drawPolyline($event)">
+    
 </app-form>
 
