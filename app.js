@@ -9,8 +9,8 @@ app.set('json spaces', 2);
 
 var theToken; 
 async function getToken(){
-    let appId = "g2e38y2raf";
-    let hashToken = "ZzJlMzh5MnJhZnw5Rjl1WTRjSm53NXNWUkF4ek5ibld4VjhDeW5lQlJnOVUxQU54YkEx";
+    let appId = "acidafmx03";
+    let hashToken = "YWNpZGFmbXgwM3xiUmp2QTRZVnBiYU1CWXBWUmkzOTY5aGJDMkZza2w0VDdwbXVGRVBB";
     let url = `https://api.iq.inrix.com/auth/v1/appToken?appId=${appId}&hashToken=${hashToken}`;
 
     var requestOptions = {
@@ -39,12 +39,12 @@ app.get('/findRoute', async function (req, res) {
     let url = `https://api.iq.inrix.com/findRoute?wp_1=${lat1}%2C${long1}&wp_2=${lat2}%2C${long2}&maxAlternates=2&format=json`
     //Set up query method
 
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer " + theToken);
 
     var requestOptions = {
     method: 'GET',
-    headers: myHeaders,
+    headers: {
+        "Authorization": "Bearer " + theToken
+    },
     redirect: 'follow'
     };
 
