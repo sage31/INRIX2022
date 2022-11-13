@@ -8,6 +8,7 @@ import { LocationInputComponent } from './location-input/location-input.componen
 import { SearchboxComponent } from './searchbox/searchbox.component';
 import { FooterComponent } from './footer/footer.component';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {LeafletModule} from '@asymmetrik/ngx-leaflet';
     LocationInputComponent,
     SearchboxComponent,
     FooterComponent,
+    MapComponent
 
   ],
   imports: [
