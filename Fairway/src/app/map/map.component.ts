@@ -30,7 +30,20 @@ export class MapComponent implements OnInit {
       iconAnchor: [22, 94],
       popupAnchor: [-3, -76],
     });
+    
+    //function that runs when form is submitted
+    /*function submitForm(event) {
+      event.preventDefault();
+
      
+    }
+    */
+
+    //assign form to a form variable, start and destination
+    const form = document.getElementById('form');
+
+    //form?.addEventListener('submit', submitForm); 
+
     L.marker([37.7749, -122.4194], {icon: myIcon}).addTo(this.map);
     L.marker([37.7529, -122.4474], {icon: myIcon}).addTo(this.map);
 
@@ -46,9 +59,31 @@ export class MapComponent implements OnInit {
 
   @ViewChild('locationInput') locationInput: ElementRef;
   @ViewChild('main') main: ElementRef;
-  //
-  submitForm(event) {
-    
+  
+  //function to get coordinates from address
+  getCoordinates(address: string){
+    this.geocoder.geocode({address: address}, (results, status) => {
+      if(status === "OK"){
+        this.map.setCenter(results[0].geometry.location);
+        this.map.setZoom(15);
+        this.marker.setPosition(results[0].geometry.location);
+      }
+    });
+  }
+  
+  calculateDistance(){
+    //get start and end location from form
+    var start = (<HTMLInputElement>document.getElementById("start")).value;
+    var end = (<HTMLInputElement>document.getElementById("end")).value;
+    //get coordinates of start and end location
+    var startCoord = this.getCoordinates(start);
+    var endCoord = this.getCoordinates(end);
+
+    //calculate distance between start and end location
+    var distance = this.getDistance(startCoord, endCoord);
+
+    //display distance on page
+    //document.getElementById("distance").innerHTML = distance + " miles";
   }
 
 
