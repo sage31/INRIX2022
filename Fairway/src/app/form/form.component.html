@@ -1,5 +1,5 @@
 <div class="formBlock">
-  <div id="searchBar">
+  <div #searchBar id="searchBar">
   <form (ngSubmit)="calculateRoute($event)" novalidate>
     <!--<div class="autocomplete-container" id="autocomplete-container"></div>-->
     <input [(ngModel)]="s_address" type="text" name="start" class="input" id="start"
@@ -7,12 +7,12 @@
     <br>
     <input [(ngModel)]="e_address" type="text" name="end " class="input" id="destination"
       placeholder="Choose Destination" />
-    <button type="submit">Calculate</button>
+    <button type="submit" id="submit">Calculate</button>
   </form>
   </div>
 </div>
 
-<div #temp id="temp" style="display:block;">
+<div #temp id="temp" style="display:none;">
   <button (click)="openMenu()" class="btn">&#9776; Search</button>
 </div>
 
